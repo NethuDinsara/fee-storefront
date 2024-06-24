@@ -1,0 +1,10 @@
+h1{
+  color: red;
+}
+
+div{
+  justify-content: space-between;
+}
+.navBar a{
+  justify-content: space-between;
+}
