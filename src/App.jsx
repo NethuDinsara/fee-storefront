@@ -1,22 +1,28 @@
+import Hero from "./components/Hero"
+import Navigation from './components/Navigations'
 
-import './App.css'
+// import './App.css'
 
 function App() {
+  const name="Nethu";
 
   return (
     <>
     <div>
-      <h1>HEYYY</h1>
-      <nav className='navBar'>
-        <a href="https://react.dev/">Home</a>
-        <a href="https://react.dev/">Contact</a>
-        <a href="https://react.dev/">Portfolio</a>
+    
 
-      </nav>
+      <i class="fas fa-search"></i>
+      <h1>ChatGpt</h1>
+     
      </div>
-     <div className="content2">
-
+     <div>
+      <Navigation name={name}/>
      </div>
+     
+     <div>
+      <Hero/>
+     </div>
+     
     </>
      
 
