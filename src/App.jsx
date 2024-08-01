@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Navigation from './components/Navigations'
+import Products from "./components/Products";
 
 // import './App.css'
 
@@ -7,26 +8,12 @@ function App() {
   const name="Nethu";
 
   return (
-    <>
-    <div>
-    
-
-      <i class="fas fa-search"></i>
-      <h1>ChatGpt</h1>
-     
-     </div>
-     <div>
+    <main>
       <Navigation name={name}/>
-     </div>
-     
-     <div>
       <Hero/>
-     </div>
-     
-    </>
-     
-
-  )
+      <Products/>
+    </main>
+  );
 }
 
 export default App

@@ -3,7 +3,7 @@ function Navigation(props) {
     return (
       <nav className="flex items-center justify-between py-8 px-16">
         <div className="flex items-center gap-x-16">
-          <a className="font-semibold text-3xl" to="/">
+          <a className="font-semibold text-3xl" to="/http://localhost:5174/cart">
             Mebius
           </a>
           <div className="flex items-center gap-x-4">
@@ -33,11 +33,14 @@ function Navigation(props) {
                   <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                 </svg>
                 Cart
+                
               </div>
+              
             </a>
           </div>
           <p>Hi, {props.name}</p>
         </div>
+        
       </nav>
     );
   }
