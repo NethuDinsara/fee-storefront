@@ -5,9 +5,19 @@ function ProductCard(props){
 console.log(props);
 
 const [isLiked,setIsLiked]=useState(false);
-const handleClick=()=>{
+const [num,setNum]=useState(0);
+
+const heartClick=()=>{
     setIsLiked(!isLiked);
 }
+// const handleClick=(name)=>{
+//     console.log(name)
+// }
+const handleAddToCart =() =>{
+    setNum(num+1);
+}
+
+
 
 
 
@@ -16,6 +26,7 @@ const handleClick=()=>{
             {isLiked ?(
                 <Heart
                 onClick={()=>{setIsLiked(!isLiked)}}
+                
                 className="absolute top-4 right-4 cursor-pointer text-red-500 fill-red-500"
             />
             ) : (
@@ -24,6 +35,8 @@ const handleClick=()=>{
                 className="absolute top-4 right-4 cursor-pointer text-red-500"
             />
             )}
+
+            
         
             
 
@@ -32,6 +45,8 @@ const handleClick=()=>{
             <div className={'h-64 rounded-xl bg-[#f2f8f9]relative'}>
             <img src={props.image} alt="item-img" className="w-full object-cover" />
             </div>
+
+            <p>{num}</p>
 
             <div className="mt-4">
                 <div className="flex items-center justify-between">
@@ -42,11 +57,12 @@ const handleClick=()=>{
 
                 <div className="mt-2">
                     <button
-                    onClick={(e)=> handleClick(props.name)}
+                    onClick={handleAddToCart}
                     type="button"
                     className="border-2 border-black px-4 text-lg rounded-lg mt-2 font-medium hover:bg-black hover:text-white tr">
                         Add to Cart
                         </button>
+                        
                 </div>
             </div>
            
