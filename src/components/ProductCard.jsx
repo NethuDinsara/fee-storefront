@@ -6,6 +6,7 @@ console.log(props);
 
 const [isLiked,setIsLiked]=useState(false);
 const handleClick=()=>{
+    setIsLiked(!isLiked);
 }
 
 
